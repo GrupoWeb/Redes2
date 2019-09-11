@@ -83,7 +83,7 @@ function renderAvatar(user) {
 }
 
 function fullName(user) {
-  return user ? `${user.name} ${user.lastName}` : 'Who are you?'
+  return user ? `${user.name} ${user.lastName}` : "¿Quién eres tú?";
 }
 
 export default ({ children, user }) => (

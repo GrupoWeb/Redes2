@@ -143,88 +143,73 @@ export default class Chatroom extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '100%' }}>
+      <div style={{ height: "100%" }}>
         <ChatWindow>
           <Header>
-            <Title>
-              { this.props.chatroom.name }
-            </Title>
+            <Title>{this.props.chatroom.name}</Title>
             <RaisedButton
               primary
               icon={
-                <FontIcon
-                  style={{ fontSize: 24 }}
-                  className="material-icons"
-                >
-                  {'close'}
+                <FontIcon style={{ fontSize: 24 }} className="material-icons">
+                  {"close"}
                 </FontIcon>
               }
               onClick={this.props.onLeave}
             />
           </Header>
-          <ChatroomImage
-            src={this.props.chatroom.image}
-            alt=""
-          />
+          <ChatroomImage src={this.props.chatroom.image} alt="" />
           <ChatPanel>
-            <Scrollable innerRef={(panel) => { this.panel = panel; }}>
+            <Scrollable
+              innerRef={panel => {
+                this.panel = panel;
+              }}
+            >
               <List>
-                {
-                  this.state.chatHistory.map(
-                    ({ user, message, event }, i) => [
-                      <NoDots>
-                        <ListItem
-                          key={i}
-                          style={{ color: '#fafafa' }}
-                          leftAvatar={<Avatar src={user.image} />}
-                          primaryText={`${user.name} ${event || ''}`}
-                          secondaryText={
-                            message &&
-                            <OutputText>
-                              { message }
-                            </OutputText>
-                          }
-                        />
-                      </NoDots>,
-                      <Divider inset />
-                    ]
-                  )
-                }
+                {this.state.chatHistory.map(({ user, message, event }, i) => [
+                  <NoDots>
+                    <ListItem
+                      key={i}
+                      style={{ color: "#fafafa" }}
+                      leftAvatar={<Avatar src={user.image} />}
+                      primaryText={`${user.name} ${event || ""}`}
+                      secondaryText={
+                        message && <OutputText>{message}</OutputText>
+                      }
+                    />
+                  </NoDots>,
+                  <Divider inset />
+                ])}
               </List>
             </Scrollable>
             <InputPanel>
               <TextField
-                textareaStyle={{ color: '#fafafa' }}
-                hintStyle={{ color: '#fafafa' }}
-                floatingLabelStyle={{ color: '#fafafa' }}
-                hintText="Enter a message."
-                floatingLabelText="Enter a message."
+                textareaStyle={{ color: "#fafafa" }}
+                hintStyle={{ color: "#fafafa" }}
+                floatingLabelStyle={{ color: "#fafafa" }}
+                hintText="Ingrese Mensaje."
+                floatingLabelText="Ingrese Mensaje."
                 multiLine
                 rows={4}
                 rowsMax={4}
                 onChange={this.onInput}
                 value={this.state.input}
-                onKeyPress={e => (e.key === 'Enter' ? this.onSendMessage() : null)}
+                onKeyPress={e =>
+                  e.key === "Enter" ? this.onSendMessage() : null
+                }
               />
               <FloatingActionButton
                 onClick={this.onSendMessage}
                 style={{ marginLeft: 20 }}
               >
-                <FontIcon
-                  style={{ fontSize: 32 }}
-                  className="material-icons"
-                >
-                  {'chat_bubble_outline'}
+                <FontIcon style={{ fontSize: 32 }} className="material-icons">
+                  {"chat_bubble_outline"}
                 </FontIcon>
               </FloatingActionButton>
             </InputPanel>
           </ChatPanel>
-          <Overlay
-            opacity={0.6}
-            background="#111111"
-          />
+          <Overlay opacity={0.6} background="#111111" />
         </ChatWindow>
       </div>
-    )
+    );
   }
 }

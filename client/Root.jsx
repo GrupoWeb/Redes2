@@ -170,7 +170,7 @@ export default class Root extends React.Component {
                         />
                       ))
                     }
-                  </Switch>
+                  </Switch> 
                 )
             }
           </MainLayout>

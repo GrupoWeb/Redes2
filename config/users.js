@@ -1,27 +1,54 @@
 module.exports = [
   {
-    name: 'Rick',
-    lastName: 'Grimes',
-    statusText: 'I am the leader!',
-    image: 'users/rick.jpg'
+    name: 'Juan José',
+    lastName: 'Jolon Granados',
+    statusText: 'Usuario Principal',
+    image: 'users/user.png'
   },
   {
-    name: 'Daryl',
-    lastName: 'Dixon',
-    statusText: 'I like smashing Walkers.',
-    image: 'users/daryl.jpg'
+    name: 'Cristian',
+    lastName: 'Gomez',
+    statusText: 'Usuario',
+    image: 'users/user.png'
   },
-  {
-    name: 'Carol',
-    lastName: 'Peletier',
-    statusText: 'Don\'t mess with me!',
-    image: 'users/carol.jpg'
-  },
-  {
-    name: 'Negan',
-    lastName: '',
-    statusText: 'In a relationship with Lucille.',
-    image: 'users/negan.jpeg'
-  }
+  // {
+  //   name: 'Carol',
+  //   lastName: 'Peletier',
+  //   statusText: 'Don\'t mess with me!',
+  //   image: 'users/carol.jpg'
+  // },
+  // {
+  //   name: 'Negan',
+  //   lastName: '',
+  //   statusText: 'In a relationship with Lucille.',
+  //   image: 'users/negan.jpeg'
+  // }
 ]
+
+// module.exports = [
+//   {
+//     name: 'Rick',
+//     lastName: 'Grimes',
+//     statusText: 'I am the leader!',
+//     image: 'users/rick.jpg'
+//   },
+//   {
+//     name: 'Daryl',
+//     lastName: 'Dixon',
+//     statusText: 'I like smashing Walkers.',
+//     image: 'users/daryl.jpg'
+//   },
+//   {
+//     name: 'Carol',
+//     lastName: 'Peletier',
+//     statusText: 'Don\'t mess with me!',
+//     image: 'users/carol.jpg'
+//   },
+//   {
+//     name: 'Negan',
+//     lastName: '',
+//     statusText: 'In a relationship with Lucille.',
+//     image: 'users/negan.jpeg'
+//   }
+// ]
 
